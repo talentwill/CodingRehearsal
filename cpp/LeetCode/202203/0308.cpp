@@ -1,5 +1,6 @@
+#include "../helper.h"
 
-//剑指 Offer 46. 把数字翻译成字符串
+// 把数字翻译成字符串
 struct Offer46
 {
     Offer46() {
@@ -32,7 +33,7 @@ struct Offer46
     }
 };
 
-//剑指 Offer 41. 数据流中的中位数
+// 数据流中的中位数
 struct Offer41
 {
     Offer41() {
@@ -109,3 +110,8 @@ struct Offer41
         }
     }
 };
+
+int main() {
+    Offer41();
+    return 0;
+}
