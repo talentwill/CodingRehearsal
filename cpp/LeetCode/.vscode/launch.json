@@ -28,7 +28,19 @@
                 }
             ],
             "preLaunchTask": "C/C++: g++ build active file"
+        },
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/output/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ build active file"
         }
-
     ]
 }

@@ -1,1 +1,1 @@
-rm *.out
+rm -rf *.out*
