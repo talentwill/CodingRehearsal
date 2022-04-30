@@ -1,5 +1,7 @@
 #include "../helper.h"
 
+// 剑指 Offer 49. 丑数
+
 class Solution1 {
 public:
     int nthUglyNumber(int n) {
