@@ -25,7 +25,7 @@ public:
         if (n <= 3)
             return n - 1;
 
-        int quotient = n / 3;
+        int quotient = n / 3;·
         int remainder = n % 3;
 
         if (remainder == 0) { // 整除
