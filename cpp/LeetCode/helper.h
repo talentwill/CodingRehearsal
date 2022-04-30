@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cassert>
+
 #include <iostream>
 
 #include <initializer_list>
@@ -8,6 +10,7 @@
 #include <vector>
 
 #include <map>
+#include <unordered_map>
 #include <set>
 
 #include <string>
