@@ -47,3 +47,36 @@ int main() {
     cout << Solution2().cuttingRope(10);
     return 0;
 }
+// 剑指 Offer 44. 数字序列中某一位的数字
+
+class Solution {
+public:
+
+    int countOfInteger(int digits) {
+        return 9 * std::pow(10, digits - 1);
+    }
+
+    int findNthDigit(int n) {
+        if (n <= 9) return n;
+
+        int digit = 1;
+        int start = 1;
+        int count = 10;
+        while (n > count) {
+            n -= count;
+            start *= 10;
+            digit++;
+            count = countOfInteger(digit) * digit;
+        }
+
+        int num = start + n / digit;
+        return std::to_string(num).at(n %digit) - '0';
+    }
+};
+
+
+int main() {
+
+    cout << Solution().findNthDigit(12);
+    return 0;
+}

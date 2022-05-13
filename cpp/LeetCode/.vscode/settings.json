@@ -3,6 +3,20 @@
         "vector": "cpp",
         "iosfwd": "cpp",
         "iterator": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "cmath": "cpp",
+        "bitset": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "functional": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "deque": "cpp",
+        "list": "cpp"
     }
 }
