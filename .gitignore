@@ -35,3 +35,6 @@
 output/
 .idea/
 cmake-build-debug/
+
+# Rust
+target/
