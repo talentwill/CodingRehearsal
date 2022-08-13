@@ -1,4 +1,6 @@
 mod string_test;
+mod hashmap_test;
+
 fn main() {
-    string_test::test();
+    hashmap_test::test();
 }
