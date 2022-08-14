@@ -1,6 +1,8 @@
 #pragma once
 
 #include <cassert>
+#include <climits>
+#include <cmath>
 
 #include <iostream>
 
@@ -16,10 +18,8 @@
 
 
 #include <string>
-#include <cmath>
 
 #include <algorithm>
-#include <cmath>
 
 using namespace std;
 
@@ -27,16 +27,16 @@ using namespace std;
 struct ListNode
 {
     int val;
-    ListNode *next;
+    ListNode* next;
     ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
+    ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
-ListNode *createListNodes(initializer_list<int> list)
+ListNode* createListNodes(initializer_list<int> list)
 {
     ListNode head;
-    ListNode *p = &head;
+    ListNode* p = &head;
     for (auto x : list)
     {
         p->next = new ListNode(x);
@@ -45,7 +45,7 @@ ListNode *createListNodes(initializer_list<int> list)
     return head.next;
 }
 
-void printListNodes(ListNode *head)
+void printListNodes(ListNode* head)
 {
     while (head != nullptr)
     {
@@ -59,11 +59,11 @@ void printListNodes(ListNode *head)
 struct TreeNode
 {
     int val;
-    TreeNode *left;
-    TreeNode *right;
+    TreeNode* left;
+    TreeNode* right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
 #define null INT32_MAX
@@ -73,8 +73,8 @@ TreeNode* createTree(vector<int> elements) {
         return nullptr;
     }
 
-    queue<TreeNode *> nodes;
-    TreeNode *root = new TreeNode(elements[0]);
+    queue<TreeNode*> nodes;
+    TreeNode* root = new TreeNode(elements[0]);
     nodes.emplace(root);
 
     int i = 1;

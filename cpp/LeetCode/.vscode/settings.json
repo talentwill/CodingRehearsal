@@ -17,6 +17,7 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "deque": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "climits": "cpp"
     }
 }
