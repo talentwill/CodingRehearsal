@@ -1,5 +1,6 @@
 mod u05_iterators;
+mod u06_exercise_implement_generic_type;
 
 fn main() {
-    println!("hello world.");
+    u06_exercise_implement_generic_type::test();
 }
