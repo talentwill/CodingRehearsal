@@ -24,3 +24,8 @@ pub fn test() {
     assert_eq!(Container::new(-12).value, -12);
     assert_eq!(Container::new(Some("text")).value, Some("text"));
 }
+
+#[test]
+fn case1() {
+    test();
+}
