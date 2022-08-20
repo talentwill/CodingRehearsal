@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 serde_json = "1.0.83"
 structopt = "0.3.26"
+home = "0.5.3"
+anyhow = "1.0"
 
 [dependencies.chrono]
 features = ["serde"] # used to serilize DataTime field.
