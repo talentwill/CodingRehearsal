@@ -1,4 +1,7 @@
 mod authentication {
+    use std::collections::hash_map::DefaultHasher;
+    use std::hash::{Hash, Hasher};
+
     pub struct User {
         username: String,
         password_hash: u64,
@@ -8,7 +11,9 @@ mod authentication {
         pub fn new(username: &str, password: &str) -> User {
             User {
                 username: username.to_string(),
-                password_hash: hash_password(password),
+                // because str doesn't support Sized trait, which will be used by Hash,
+                // so here, we create a String from str by to_owned() which copies the data.
+                password_hash: hash_password(&password.to_owned()),
             }
         }
 
@@ -19,17 +24,19 @@ mod authentication {
         }
 
         pub fn set_password(&mut self, new_password: &str) {
-            self.password_hash = hash_password(new_password);
+            self.password_hash = hash_password(&new_password.to_owned());
         }
     }
 
-    fn hash_password(password: &str) -> u64 {
-        123
+    fn hash_password<T: Hash>(password: &T) -> u64 {
+        let mut s = DefaultHasher::new(); // 1. get a default hasher
+        password.hash(&mut s); // 2. feed password's value to hasher
+        s.finish() // return the hash value.
     }
 }
 
 fn main() {
     let mut user = authentication::User::new("Hello World", "123456");
     println!("The username is: {}", user.get_username());
-    user.set_password("abcdef");
+    user.set_password("654321");
 }
