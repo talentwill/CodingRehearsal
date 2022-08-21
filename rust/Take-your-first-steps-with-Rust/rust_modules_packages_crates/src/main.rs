@@ -12,3 +12,7 @@ fn main() {
 
     exercise1::test();
 }
+
+fn hello(world: Good) -> Option<Err(Error::)> {
+    unimplemented!();
+}
