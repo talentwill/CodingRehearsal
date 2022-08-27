@@ -18,6 +18,11 @@
         "streambuf": "cpp",
         "deque": "cpp",
         "list": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "queue": "cpp",
+        "tuple": "cpp",
+        "variant": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp"
     }
 }

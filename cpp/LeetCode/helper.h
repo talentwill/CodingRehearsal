@@ -121,3 +121,12 @@ void print2DVectors(vector<vector<int>> v) {
     }
     cout << "]\n";
 }
+
+void print(vector<int> v) {
+    if (not v.empty()) {
+        cout << "[";
+        for (int i = 0; i < v.size() - 1; i++)
+            cout << v[i] << ",";
+        cout << v.back() << "]";
+    }
+}
