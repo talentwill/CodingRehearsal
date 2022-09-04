@@ -23,6 +23,7 @@
         "tuple": "cpp",
         "variant": "cpp",
         "utility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "stack": "cpp"
     }
 }

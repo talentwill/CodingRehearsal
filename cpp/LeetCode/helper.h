@@ -9,6 +9,7 @@
 #include <initializer_list>
 #include <list>
 #include <queue>
+#include <stack>
 #include <vector>
 
 #include <map>
