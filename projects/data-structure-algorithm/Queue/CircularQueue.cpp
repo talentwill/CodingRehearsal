@@ -2,7 +2,7 @@
  * @Author: talentwill
  * @Date:   2023-06-10 12:00:43
  * @Last Modified by:   talentwill
- * @Last Modified time: 2023-06-10 12:13:46
+ * @Last Modified time: 2023-06-10 12:18:37
  */
 
 #include <iostream>
@@ -29,7 +29,8 @@ struct CircularQueue {
         if ((tail + 1) % n == head) {
             return false;
         }
-        items[tail++] = x;
+        items[tail] = x;
+        tail = (tail + 1) % n;
         return true;
     }
 
@@ -38,7 +39,9 @@ struct CircularQueue {
         if (tail == head) {
             return {};
         }
-        return items[head++];
+        T ret = items[head];
+        head = (head + 1) % n;
+        return ret;
     }
 };
 
